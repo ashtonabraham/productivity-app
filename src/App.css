@@ -24,7 +24,7 @@
 }
 
 .nav-active {
-  color: var(--accent);
+  color: var(--text);
   font-weight: 500;
 }
 
