@@ -23,11 +23,6 @@
   border-radius: 4px;
 }
 
-.nav-active {
-  color: var(--text);
-  font-weight: 500;
-}
-
 .header nav {
   display: flex;
   gap: 0.5rem;
@@ -43,6 +38,16 @@
 }
 
 .header nav button:hover {
+  color: var(--text);
+}
+
+/* Active page: white and bold the whole time you're on it */
+.header nav button.nav-active {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.header nav button.nav-active:hover {
   color: var(--text);
 }
 
