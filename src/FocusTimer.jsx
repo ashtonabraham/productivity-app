@@ -50,6 +50,7 @@ export default function FocusTimer() {
     <div className="timer">
       {phase === 'idle' && (
         <>
+          <h2 className="section-label">FOCUS</h2>
           <div className="timer-presets">
             {PRESETS.map(({ label, minutes }) => (
               <button
@@ -67,6 +68,7 @@ export default function FocusTimer() {
       )}
       {(phase === 'work' || phase === 'break') && (
         <>
+          <h2 className="section-label timer-label">FOCUS</h2>
           <div className="timer-display" data-phase={phase}>
             {timeStr}
           </div>
