@@ -7,12 +7,16 @@ const PRESETS = [
 ]
 const BREAK_MINUTES = 5
 
-export default function FocusTimer() {
+export default function FocusTimer({ onPhaseChange }) {
   const [phase, setPhase] = useState('idle') // idle | work | break
   const [secondsLeft, setSecondsLeft] = useState(0)
   const [workMinutes, setWorkMinutes] = useState(25)
   const phaseRef = useRef(phase)
   phaseRef.current = phase
+
+  useEffect(() => {
+    onPhaseChange?.(phase)
+  }, [phase, onPhaseChange])
 
   const stop = () => {
     setPhase('idle')

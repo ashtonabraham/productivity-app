@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import FocusTimer from './FocusTimer'
 
 export default function Today({
@@ -11,6 +12,7 @@ export default function Today({
   onUnwrap,
   todayWrapped,
 }) {
+  const [timerPhase, setTimerPhase] = useState('idle')
   const focusTasks = todayFocus
     .map(id => tasks.find(t => t.id === id))
     .filter(Boolean)
@@ -23,9 +25,13 @@ export default function Today({
       <h1 className="page-title">Today</h1>
 
       <section className="focus-section">
-        <h2 className="section-label">Top 3</h2>
-        {focusTasks.length === 0 && !todayWrapped && (
-          <p className="muted">Pick up to 3 tasks from the backlog to focus on today.</p>
+        {timerPhase === 'idle' && (
+          <>
+            <h2 className="section-label">Top 3</h2>
+            {focusTasks.length === 0 && !todayWrapped && (
+              <p className="muted">Pick up to 3 tasks from the backlog to focus on today.</p>
+            )}
+          </>
         )}
         {todayWrapped && (
           <>
@@ -83,7 +89,7 @@ export default function Today({
       {!todayWrapped && (
         <>
           <section className="timer-section">
-            <FocusTimer />
+            <FocusTimer onPhaseChange={setTimerPhase} />
           </section>
 
           <section className="wrap-section">
