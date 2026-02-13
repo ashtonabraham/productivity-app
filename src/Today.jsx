@@ -83,6 +83,7 @@ export default function Today({
       {!todayWrapped && (
         <>
           <section className="timer-section">
+            <h2 className="section-label">FOCUS</h2>
             <FocusTimer />
           </section>
 
