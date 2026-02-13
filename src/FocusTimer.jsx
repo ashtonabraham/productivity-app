@@ -70,10 +70,7 @@ export default function FocusTimer() {
           <div className="timer-display" data-phase={phase}>
             {timeStr}
           </div>
-          <p className="timer-phase">
-            {phase === 'work' ? 'Focus' : 'Break'}
-          </p>
-          <button type="button" className="btn-ghost" onClick={stop}>
+          <button type="button" className="btn-danger" onClick={stop}>
             Stop
           </button>
         </>

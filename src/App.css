@@ -247,6 +247,21 @@
   background: var(--accent-hover);
 }
 
+.timer .btn-danger {
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.timer .btn-danger:hover {
+  background: #dc2626;
+}
+
 .btn-ghost {
   background: none;
   border: none;
