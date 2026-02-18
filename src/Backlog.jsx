@@ -32,7 +32,7 @@ export default function Backlog({ tasks, todayFocus, onAdd, onEdit, onDelete, on
 
   return (
     <div className="backlog">
-      <h1 className="page-title">Backlog</h1>
+      <h1 className="page-title">Tasklog</h1>
       <p className="muted">All tasks. Promote up to 3 to Today.</p>
 
       <form className="add-form" onSubmit={handleAdd}>

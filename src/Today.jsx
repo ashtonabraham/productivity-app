@@ -29,7 +29,7 @@ export default function Today({
           <>
             <h2 className="section-label">Top 3</h2>
             {focusTasks.length === 0 && !todayWrapped && (
-              <p className="muted">Pick up to 3 tasks from the backlog to focus on today.</p>
+              <p className="muted">Pick up to 3 tasks from the Tasklog to focus on today.</p>
             )}
           </>
         )}
@@ -68,7 +68,7 @@ export default function Today({
         </ul>
         {!todayWrapped && canAddMore && backlog.length > 0 && (
           <div className="add-from-backlog">
-            <span className="section-sublabel">Add from backlog</span>
+            <span className="section-sublabel">Add from Tasklog</span>
             <ul className="backlog-pills">
               {backlog.slice(0, 12).map(t => (
                 <li key={t.id}>

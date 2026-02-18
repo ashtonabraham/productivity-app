@@ -111,7 +111,7 @@ export default function App() {
             className={view === 'backlog' ? 'nav-active' : ''}
             onClick={() => setView('backlog')}
           >
-            Backlog
+            Tasklog
           </button>
         </nav>
       </header>
