@@ -54,7 +54,7 @@ export default function FocusTimer({ onPhaseChange }) {
     <div className="timer">
       {phase === 'idle' && (
         <>
-          <h2 className="section-label">FOCUS</h2>
+          <h2 className="section-label">⏱️ FOCUS</h2>
           <div className="timer-presets">
             {PRESETS.map(({ label, minutes }) => (
               <button
@@ -72,12 +72,12 @@ export default function FocusTimer({ onPhaseChange }) {
       )}
       {(phase === 'work' || phase === 'break') && (
         <>
-          <h2 className="section-label timer-label">FOCUS</h2>
+          <h2 className="section-label timer-label">⏱️ FOCUS</h2>
           <div className="timer-display" data-phase={phase}>
             {timeStr}
           </div>
           <button type="button" className="btn-danger" onClick={stop}>
-            Stop
+            ⏹️ Stop
           </button>
         </>
       )}

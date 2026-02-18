@@ -96,7 +96,7 @@ export default function App() {
   return (
     <>
       <header className="header">
-        <span className="logo">Daily Focus</span>
+        <span className="logo">🎯 Daily Focus</span>
         {streak > 0 && (
           <span className="streak-badge">🔥 {streak} day{streak !== 1 ? 's' : ''}</span>
         )}

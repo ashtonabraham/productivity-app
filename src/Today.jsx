@@ -22,12 +22,12 @@ export default function Today({
 
   return (
     <div className="today">
-      <h1 className="page-title">Today</h1>
+      <h1 className="page-title">📅 Today</h1>
 
       <section className="focus-section">
         {timerPhase === 'idle' && (
           <>
-            <h2 className="section-label">Top 3</h2>
+            <h2 className="section-label">⭐ Top 3</h2>
             {focusTasks.length === 0 && !todayWrapped && (
               <p className="muted">Pick up to 3 tasks from the Tasklog to focus on today.</p>
             )}
@@ -68,7 +68,7 @@ export default function Today({
         </ul>
         {!todayWrapped && canAddMore && backlog.length > 0 && (
           <div className="add-from-backlog">
-            <span className="section-sublabel">Add from Tasklog</span>
+            <span className="section-sublabel">➕ Add from Tasklog</span>
             <ul className="backlog-pills">
               {backlog.slice(0, 12).map(t => (
                 <li key={t.id}>
@@ -94,7 +94,7 @@ export default function Today({
 
           <section className="wrap-section">
             <button type="button" className="btn-primary" onClick={onWrapUp}>
-              Wrap up day
+              ✨ Wrap up day
             </button>
             <p className="muted small">Lock today’s focus and record your streak.</p>
           </section>
