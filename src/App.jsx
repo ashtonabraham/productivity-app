@@ -107,6 +107,7 @@ export default function App() {
           >
             Today
           </button>
+          <span className="nav-separator"> | </span>
           <button
             className={view === 'backlog' ? 'nav-active' : ''}
             onClick={() => setView('backlog')}

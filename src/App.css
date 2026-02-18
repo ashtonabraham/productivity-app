@@ -25,7 +25,13 @@
 
 .header nav {
   display: flex;
+  align-items: center;
   gap: 0.5rem;
+}
+
+.header nav .nav-separator {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .header nav button {
